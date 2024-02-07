@@ -17,25 +17,6 @@ Description : Flex Layouts.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
-	</style>
-
 	<style>
 		/* CSS for menu. You don't need to touch this part */
 		.menu { background-color: #e6e6e6; }
@@ -68,11 +49,15 @@ Description : Flex Layouts.
         body { margin: 0; padding: 0; }
         img { max-width: 100%; height: auto; }
         .container { 
-			/*I need some CSS codes.*/
+			display: flex;
+			flex-wrap: wrap;
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
         .main { 
 			padding: 15px; 
@@ -82,16 +67,25 @@ Description : Flex Layouts.
         .news-item { padding: 10px; }
         .row { 
 			/*I need some CSS codes.*/
-		}
-
-		.large, .medium, .small {
-			box-sizing: border-box;
-			float: left;
-            width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
         
 		/*CSS for desktop*/
         @media screen and (min-width: 769px) {    
+			.menu{
+				text-align: center;
+				float: left;
+				justify-content: space-between;
+				width: 150px;
+				height:100%
+			}
+			.body{
+				flex-direction: row;
+				width: 100%;
+
+			}
 			.large { 
 				width: 100;
 			}
@@ -105,7 +99,14 @@ Description : Flex Layouts.
 
 		/*CSS for tablet*/
         @media screen and (max-width: 768px) {
-			.menu { width: 100%; display: inline-block; }     
+			.menu { width: 100%; display: inline-block;
+			}
+			.body{
+				width: 100%;
+			}     
+			.menu ul{
+				flex-direction: row;
+			}
 			.main{ margin-left: 0;}
 			.large { 
 				width: 100;
@@ -121,15 +122,9 @@ Description : Flex Layouts.
         @media screen and (max-width: 480px) {
 
             .news-item header h1 { font-size:18px;}
-			.large { 
-				width: 100;
-			}
-			.medium { 
+			.small, .medium, .large { 
 				width: 100%;
 			}
-			.small { 
-				width: 100%;
-			 } 
         }
     </style>
 </head>
@@ -195,7 +190,7 @@ Description : Flex Layouts.
 							<p>In an unprecedented feat of human courage and technological prowess, astronaut Ryan Razi completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
 
 							<h3>A Breathtaking Journey</h3>
-							<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
+							<p>Razi, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
 
 							<h3>Pushing the Boundaries of Science</h3>
 							<p>The successful spacewalk not only demonstrates human resilience but also advances our understanding of space and our capabilities to explore further into the unknown.</p>
