@@ -20,7 +20,7 @@ Description : Responsive Layouts.
 	<!-- First, link the menu.css file here -->
 	<link rel="stylesheet" href="menu.css">
 
-	<style>	
+	<!-- <style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
 		div {
 			border: 1px dashed gray;	
@@ -37,7 +37,7 @@ Description : Responsive Layouts.
 		.small {
 			border: 1px solid yellow;	
 		}		
-	</style>
+	</style> -->
 
     <style>
 		body { margin: 0; padding: 0;}
@@ -49,9 +49,10 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
+            /* width: 100%;
+			margin: 0; */
+			display: block;
 			box-sizing: border-box;
-			float: left;
-            width: 100%;
 		}
 
 		.large, .medium, .small {
@@ -63,7 +64,8 @@ Description : Responsive Layouts.
 		.gap {
 			width: 100%;
 			height: 50px;
-			clear:both
+			clear:both;
+			float: initial;
 		}
 
 		@media screen and (min-width: 769px) {			
@@ -76,6 +78,10 @@ Description : Responsive Layouts.
 			.small { 
 				width: 30%;
 			 }
+			 .menu{
+				height: 100%;
+				display: inline-block;
+			 }
 		}
 
         @media screen and (max-width: 768px) {
@@ -84,13 +90,15 @@ Description : Responsive Layouts.
 			}
 			.medium { 
 				width: 60%;
+				height: 50%;
 			}
 			.small { 
 				width: 40%;
+				height: 50%;
 			 }
 			 .menu{
 				width: 100%;
-			display: inline-block;			 
+				display: inline-block;			 
 			}
 			.main{
 				margin: 0;
