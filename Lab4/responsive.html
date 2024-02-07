@@ -18,8 +18,7 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
-	<link rel="stylesheet" href="menus.css">
-
+	<link rel="stylesheet" href="menu.css">
 
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
@@ -50,12 +49,13 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
-			overflow: hidden;	
+			height: 500px;
 		}
 
 		.large, .medium, .small {
 			box-sizing: border-box;
-            width: 100%; /* By default, make them 100% width */
+			float: left;
+            width: 100%;
 		}
 		
 		.gap {
