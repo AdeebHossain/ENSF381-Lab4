@@ -2,8 +2,8 @@
 =========================================================
 Name        : index.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Ryan Razi and Adeeb Hossain
+Submission  : Feb 7, 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -83,36 +83,53 @@ Description : Flex Layouts.
         .row { 
 			/*I need some CSS codes.*/
 		}
-        
 
-        @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+		.large, .medium, .small {
+			box-sizing: border-box;
+			float: left;
+            width: 100%;
+		}
+        
+		/*CSS for desktop*/
+        @media screen and (min-width: 769px) {    
 			.large { 
-				/*I need some CSS codes.*/
+				width: 100;
 			}
 			.medium { 
-				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
-				/*I need some CSS codes.*/
+				width: 30%;
 			 }       
         }
 
+		/*CSS for tablet*/
         @media screen and (max-width: 768px) {
-			.body { 
-				/*I need some CSS codes.*/
+			.menu { width: 100%; display: inline-block; }     
+			.main{ margin-left: 0;}
+			.large { 
+				width: 100;
 			}
-            .menu ul { 
-				/*I need some CSS codes.*/
-			 }            
-            /*I need some CSS codes.*/
+			.medium { 
+				width: 60%;
+			}
+			.small { 
+				width: 40%;
+			 }  
         }
 
         @media screen and (max-width: 480px) {
-            .news-item header h1 { font-size: 18px; }
-            .medium, .small { 
-				/*I need some CSS codes.*/
-			 }
+
+            .news-item header h1 { font-size:18px;}
+			.large { 
+				width: 100;
+			}
+			.medium { 
+				width: 100%;
+			}
+			.small { 
+				width: 100%;
+			 } 
         }
     </style>
 </head>
@@ -175,7 +192,7 @@ Description : Flex Layouts.
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
 							<h2>A Historic Moment in Space Exploration</h2>
-							<p>In an unprecedented feat of human courage and technological prowess, astronaut Mahdi Ansari completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
+							<p>In an unprecedented feat of human courage and technological prowess, astronaut Ryan Razi completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
 
 							<h3>A Breathtaking Journey</h3>
 							<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
